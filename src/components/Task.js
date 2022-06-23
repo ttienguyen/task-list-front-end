@@ -9,12 +9,7 @@ const Task = ({ id, title, isComplete, onClick, onRemove }) => {
   };
 
   const onClickFunc = () => {
-    const updatedTask = {
-      id: id,
-      title: title,
-      isComplete: !isComplete,
-    };
-    onClick(updatedTask);
+    onClick(id);
   };
   const buttonClass = isComplete ? 'tasks__item__toggle--completed' : '';
 

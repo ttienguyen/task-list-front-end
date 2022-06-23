@@ -23,7 +23,7 @@ const App = () => {
   const onClick = (updatedTask) => {
     const newTasks = tasks.map((task) => {
       if (task.id === updatedTask.id) {
-        return updatedTask;
+        return { ...task, isComplete: !task.isComplete };
       } else {
         return task;
       }
